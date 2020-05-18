@@ -22,7 +22,7 @@ type: page
 * 豆瓣
 
 ## 友情链接
-
+link
 
 ## Comments
 
