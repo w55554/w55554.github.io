@@ -1,1 +1,64 @@
-theme: jekyll-theme-leap-day
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Len's site
+brief-intro: 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.it1zu.cn" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+future: true
+# other links
+twitter_username: 
+facebook_username: wanglei7031251
+github_username:  w55554
+email: wanglei7031251@gmail.com
+weibo_username: wanglei7031251
+zhihu_username: wanglei7031251
+linkedIn_username: wanglei7031251
+dribbble_username:
+
+description_footer: 记录我的沿途风景，回忆美好时光。
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: #hygblog
+disqus_shortname: wanglei7031251
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 
+google_analytics_id: 
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 1
+
+
+plugins: [jekyll-paginate]
