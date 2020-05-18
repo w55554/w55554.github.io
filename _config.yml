@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -62,3 +63,4 @@ paginate: 1
 
 
 plugins: [jekyll-paginate]
+theme: jekyll-theme-minimal
