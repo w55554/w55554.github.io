@@ -98,6 +98,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -110,6 +112,64 @@
         <small>这里记录着我的前端学习之路</small>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-05-19
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    使用Github pages + jekyll 创建自己的小站，文章中是详细的教程。
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/05/19/create-site/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -189,16 +249,25 @@
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
     <div class="right">
         <div class="wrap">
-            <div class="side">
+           <div class="side">
                 <div>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a></li>
+                    
                         <li><a href="/2015/02/10/welcome-to-jekyll/">hello jekyll!</a></li>
                     
                 </ul>
+            </div> 
+
+            <div class="side">
+                <div id="search-container">
+                    <input type="text" id="search-input" placeholder="search...">
+                    <ul id="results-container"></ul>
+                </div>
             </div>
 
             <!-- Content -->
@@ -214,7 +283,7 @@
                             <span class="name">
                                 jekyll
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -267,7 +336,7 @@
     <div class="wrapper">
 
         <p class="description">
-             记录我的沿途风景，回忆美好时光。 
+             记录沿途风景，回忆美好时光。 
         </p>
         <p class="contact">
             联系我: 
@@ -296,12 +365,23 @@
 
     <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script src=" /js/simple-jekyll-search.js  " charset="utf-8"></script>
     <script type="text/javascript">
       smoothScroll.init({
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
+   
+      SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: '没有搜索到文章',
+    limit: 20,
+    fuzzy: false
+  })
     </script>
     <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
   </body>

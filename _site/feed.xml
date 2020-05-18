@@ -5,9 +5,23 @@
     <description></description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 May 2020 16:25:24 +0800</pubDate>
-    <lastBuildDate>Mon, 18 May 2020 16:25:24 +0800</lastBuildDate>
+    <pubDate>Mon, 18 May 2020 17:42:28 +0800</pubDate>
+    <lastBuildDate>Mon, 18 May 2020 17:42:28 +0800</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>使用 jekyll + Github 创建自己的博客站点</title>
+        <description>使用Github pages + jekyll 创建自己的小站，文章中是详细的教程。</description>
+        <pubDate>Tue, 19 May 2020 00:30:54 +0800</pubDate>
+        <link>http://0.0.0.0:4000/2020/05/19/create-site/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2020/05/19/create-site/</guid>
+        
+        <category>jekyll</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>hello jekyll!</title>

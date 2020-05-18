@@ -98,6 +98,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -116,6 +118,44 @@
                         
                     
                 
+                    
+                        
+                        <li>
+                            <time>
+                            2020-05-19 Tue.
+                            </time>
+                            <a class="title" href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a>
+
+                            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
+    
+  
+
+</span>
+
+                        </li>
+                        
                     
                         
                         <li>
@@ -172,7 +212,7 @@
                     
                         <li>
                             <a data-scroll href="#jekyll">
-                                jekyll (1)
+                                jekyll (2)
                             </a>
                         </li>
                     
@@ -192,7 +232,7 @@
     <div class="wrapper">
 
         <p class="description">
-             记录我的沿途风景，回忆美好时光。 
+             记录沿途风景，回忆美好时光。 
         </p>
         <p class="contact">
             联系我: 
@@ -221,12 +261,23 @@
 
     <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script src=" /js/simple-jekyll-search.js  " charset="utf-8"></script>
     <script type="text/javascript">
       smoothScroll.init({
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
+   
+      SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: '没有搜索到文章',
+    limit: 20,
+    fuzzy: false
+  })
     </script>
     <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
   </body>

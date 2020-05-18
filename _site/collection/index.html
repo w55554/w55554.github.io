@@ -98,6 +98,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -578,7 +580,7 @@
     <div class="wrapper">
 
         <p class="description">
-             记录我的沿途风景，回忆美好时光。 
+             记录沿途风景，回忆美好时光。 
         </p>
         <p class="contact">
             联系我: 
@@ -607,12 +609,23 @@
 
     <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script src=" /js/simple-jekyll-search.js  " charset="utf-8"></script>
     <script type="text/javascript">
       smoothScroll.init({
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
+   
+      SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: '没有搜索到文章',
+    limit: 20,
+    fuzzy: false
+  })
     </script>
     <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
   </body>
