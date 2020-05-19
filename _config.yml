@@ -33,11 +33,12 @@ description_footer: 记录沿途风景，回忆美好时光。
 # duoshuo_shortname: #hygblog
 # disqus_shortname: wanglei7031251
 
+disqus_shortname: "MTAyMC81MDE2Ny8yNjY1Nw=="
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: 
+# baidu_tongji_id: 
 # google_analytics_id: 
 
 # Build settings
