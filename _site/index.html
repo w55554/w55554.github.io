@@ -105,6 +105,160 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2020/05/19/use-jekyll-search/">使用 Simple-Jekyll-Search 创建全文搜索</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-05-19
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</h2>
+<p>百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/christian-fei/Simple-Jekyll-Search.git
+</code></pre></div></div>
+<p>克隆完成后，在目录下<code class="highlighter-rouge">Simple-Jekyll-Search/dest/</code>找到 <code class="highlighter-rouge">simple-jekyll-search.js</code>文件，把这个文件复制到我们的jekyll的js目录下，以下是我的目录结构</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@aeas w55554.github.io]# ll js/
+total 76
+-rw-r--r-- 1 root root 1623 May 18 13:46 main.js
+-rw-r--r-- 1 root root 22946 May 18 13:46 masonry.pkgd.min.js
+-rw-r--r-- 1 root root 5371 May 18 13:46 pageContent.js
+-rw-r--r-- 1 root root 9618 May 18 17:26 simple-jekyll-search.js
+-rw-r--r-- 1 root root 5014 May 18 13:46 smooth-scroll.min.js
+-rw-r--r-- 1 root root 10737 May 18 13:46 waterfall.js
+</code></pre></div></div>
+<h2 id="在网站根目录下添加searchjson内容如下">在网站根目录下添加<code class="highlighter-rouge">search.json</code>，内容如下</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+[
+  
+    {
+      "title" : "使用 Simple-Jekyll-Search 创建全文搜索",
+      "category" : "",
+      "tags" : "jekyll",
+      "url" : "/2020/05/19/use-jekyll-search/",
+      "date" : "2020-05-19 00:30:54 +0800"
+    } ,
+  
+    {
+      "title" : "使用 jekyll + Github 创建自己的博客站点",
+      "category" : "",
+      "tags" : "jekyll",
+      "url" : "/2020/05/19/create-site/",
+      "date" : "2020-05-19 00:30:54 +0800"
+    } ,
+  
+    {
+      "title" : "hello jekyll!",
+      "category" : "",
+      "tags" : "jekyll",
+      "url" : "/2015/02/10/welcome-to-jekyll/",
+      "date" : "2015-02-10 23:14:54 +0800"
+    } 
+  
+]
+</code></pre></div></div>
+
+<h2 id="在_sass目录下修改_indexcss文件在文件末尾添加以下内容">在<code class="highlighter-rouge">_sass</code>目录下修改<code class="highlighter-rouge">_index.css</code>文件，在文件末尾添加以下内容</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#search-input {
+    width: 90%;
+    height: 35px;
+    color: #333;
+    background-color: rgba(227,231,236,.2);
+    line-height: 35px;
+    padding:0px 16px;
+    border: 1px solid #c0c0c0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+#search-input:focus {
+    outline: none;
+    border-color: rgb(102, 175, 233);
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
+}
+</code></pre></div></div>
+
+<h2 id="修改_layoutdefaulthtml文件添加一下内容">修改<code class="highlighter-rouge">_layout/default.html</code>文件，添加一下内容：</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src=" /js/simple-jekyll-search.js " charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '&lt;li&gt;&lt;a href="{url}" title="{desc}"&gt;{title}&lt;/a&gt;&lt;/li&gt;',
+    noResultsText: '没有搜索到文章',
+    limit: 20,
+    fuzzy: false
+  })
+&lt;/script&gt;
+</code></pre></div></div>
+
+<h2 id="修改indexhtml-文件">修改<code class="highlighter-rouge">index.html</code> 文件</h2>
+<p>修改根目录下的<code class="highlighter-rouge">index.html</code>文件，在<code class="highlighter-rouge">Recent Posts</code>上面添加一下段</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;div class="side"&gt;
+                &lt;div id="search-container"&gt;
+                    &lt;input type="text" id="search-input" placeholder="search..."&gt;
+                    &lt;ul id="results-container"&gt;&lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/05/19/use-jekyll-search/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a>
                 </h2>
                 <div class="label">
@@ -254,6 +408,8 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2020/05/19/use-jekyll-search/">使用 Simple-Jekyll-Search 创建全文搜索</a></li>
+                    
                         <li><a href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a></li>
                     
                         <li><a href="/2015/02/10/welcome-to-jekyll/">hello jekyll!</a></li>
@@ -275,7 +431,7 @@
                             <span class="name">
                                 jekyll
                             </span>
-                            <span class="badge">2</span>
+                            <span class="badge">3</span>
                         </a>
                     </li>
                     
