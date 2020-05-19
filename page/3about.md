@@ -10,6 +10,8 @@ type: page
 {:toc}
 
 ## 关于我
+* 先爆照 
+[照片](https://img.it1zu.com/myself.jpg)
 
 
 ## 联系我
