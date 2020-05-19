@@ -12,7 +12,7 @@ mathjax: true
 {:toc}
 
 ## 使用 jekyll + Github Pages 创建自己的博客站点
-原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了），所以我这里使用了Github Pages + Jekyll 来搞，主题大家可以官网[http://jekyllthemes.org/](http://jekyllthemes.org/)去选择，不要挑花眼了。我这里选用了的是[HYG](https://github.com/Gaohaoyang/gaohaoyang.github.io)大神的，Fork（不知道什么意思的，自行搜索吧。）一份到自己的仓库中，自行修改吧。
+原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了，图标是一头驴），所以我这里使用了Github Pages + Jekyll 来搞，主题大家可以官网[http://jekyllthemes.org/](http://jekyllthemes.org/)去选择，不要挑花眼了。我这里选用了的是[HYG](https://github.com/Gaohaoyang/gaohaoyang.github.io)大神的，Fork（不知道什么意思的，自行搜索吧。）一份到自己的仓库中，自行修改吧。
 
 
 ## 安装 rvm
