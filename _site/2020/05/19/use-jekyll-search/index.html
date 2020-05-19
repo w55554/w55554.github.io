@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>使用 jekyll + Github 创建自己的博客站点</title>
-    <meta name="description" content="  使用 jekyll + Github Pages 创建自己的博客站点  安装 rvm使用 jekyll + Github Pages 创建自己的博客站点原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了），所以我这里使...">
+    <title>使用 Simple-Jekyll-Search 创建全文搜索</title>
+    <meta name="description" content="  下载 Simple-Jekyll-Search 文件下载 Simple-Jekyll-Search 文件百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。git clone https://github.com/christian-fei/Simple-Jekyll-Search.gi...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="https://www.it1zu.cn/2020/05/19/create-site/">
+    <link rel="canonical" href="https://www.it1zu.cn/2020/05/19/use-jekyll-search/">
     <link rel="alternate" type="application/rss+xml" title="Len's site" href="https://www.it1zu.cn/feed.xml ">
 
 
@@ -110,7 +110,7 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>使用 jekyll + Github 创建自己的博客站点</h1>
+        <h1>使用 Simple-Jekyll-Search 创建全文搜索</h1>
         <div class="label">
 
             <div class="label-card">
@@ -155,11 +155,8 @@
         <!--a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a-->
         <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>&nbsp;
     
-        <!--a href="/tag/#github" title="Tag: github" rel="tag">github</a-->
-        <a href="/tag/#github" title="Tag: github" rel="tag">github</a>&nbsp;
-    
-        <!--a href="/tag/#pages" title="Tag: pages" rel="tag">pages</a-->
-        <a href="/tag/#pages" title="Tag: pages" rel="tag">pages</a>
+        <!--a href="/tag/#Simple-Jekyll-Search" title="Tag: Simple-Jekyll-Search" rel="tag">Simple-Jekyll-Search</a-->
+        <a href="/tag/#Simple-Jekyll-Search" title="Tag: Simple-Jekyll-Search" rel="tag">Simple-Jekyll-Search</a>
     
   
 
@@ -171,84 +168,110 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#使用-jekyll--github-pages-创建自己的博客站点" id="markdown-toc-使用-jekyll--github-pages-创建自己的博客站点">使用 jekyll + Github Pages 创建自己的博客站点</a></li>
-  <li><a href="#安装-rvm" id="markdown-toc-安装-rvm">安装 rvm</a></li>
-  <li><a href="#安装ruby" id="markdown-toc-安装ruby">安装ruby</a></li>
-  <li><a href="#变更-gem镜像源" id="markdown-toc-变更-gem镜像源">变更 <code class="highlighter-rouge">gem</code>镜像源</a></li>
-  <li><a href="#安装-jekyll" id="markdown-toc-安装-jekyll">安装 <code class="highlighter-rouge">jekyll</code></a></li>
-  <li><a href="#安装-jekyll-paginate" id="markdown-toc-安装-jekyll-paginate">安装 <code class="highlighter-rouge">jekyll-paginate</code></a></li>
-  <li><a href="#修改_configxml-添加以下内容" id="markdown-toc-修改_configxml-添加以下内容">修改<code class="highlighter-rouge">_config.xml</code> 添加以下内容</a></li>
-  <li><a href="#执行jekyll-server来查看效果" id="markdown-toc-执行jekyll-server来查看效果">执行<code class="highlighter-rouge">jekyll server</code>来查看效果</a></li>
+  <li><a href="#下载-simple-jekyll-search-文件" id="markdown-toc-下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</a></li>
+  <li><a href="#在网站根目录下添加searchjson内容如下" id="markdown-toc-在网站根目录下添加searchjson内容如下">在网站根目录下添加<code class="highlighter-rouge">search.json</code>，内容如下</a></li>
+  <li><a href="#在_sass目录下修改_indexcss文件在文件末尾添加以下内容" id="markdown-toc-在_sass目录下修改_indexcss文件在文件末尾添加以下内容">在<code class="highlighter-rouge">_sass</code>目录下修改<code class="highlighter-rouge">_index.css</code>文件，在文件末尾添加以下内容</a></li>
+  <li><a href="#修改_layoutdefaulthtml文件添加一下内容" id="markdown-toc-修改_layoutdefaulthtml文件添加一下内容">修改<code class="highlighter-rouge">_layout/default.html</code>文件，添加一下内容：</a></li>
+  <li><a href="#修改indexhtml-文件" id="markdown-toc-修改indexhtml-文件">修改<code class="highlighter-rouge">index.html</code> 文件</a></li>
 </ul>
 
-<h2 id="使用-jekyll--github-pages-创建自己的博客站点">使用 jekyll + Github Pages 创建自己的博客站点</h2>
-<p>原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了），所以我这里使用了Github Pages + Jekyll 来搞，主题大家可以官网<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a>去选择，不要挑花眼了。我这里选用了的是<a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">HYG</a>大神的，Fork（不知道什么意思的，自行搜索吧。）一份到自己的仓库中，自行修改吧。</p>
-
-<h2 id="安装-rvm">安装 rvm</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable
-//如果上面的连接失败，可以尝试:
-curl -L https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable
-source /etc/profile.d/rvm.sh
-rvm -v 
-## 出现了RVM的版本号，代表安装成功了
+<h2 id="下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</h2>
+<p>百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/christian-fei/Simple-Jekyll-Search.git
+</code></pre></div></div>
+<p>克隆完成后，在目录下<code class="highlighter-rouge">Simple-Jekyll-Search/dest/</code>找到 <code class="highlighter-rouge">simple-jekyll-search.js</code>文件，把这个文件复制到我们的jekyll的js目录下，以下是我的目录结构</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@aeas w55554.github.io]# ll js/
+total 76
+-rw-r--r-- 1 root root 1623 May 18 13:46 main.js
+-rw-r--r-- 1 root root 22946 May 18 13:46 masonry.pkgd.min.js
+-rw-r--r-- 1 root root 5371 May 18 13:46 pageContent.js
+-rw-r--r-- 1 root root 9618 May 18 17:26 simple-jekyll-search.js
+-rw-r--r-- 1 root root 5014 May 18 13:46 smooth-scroll.min.js
+-rw-r--r-- 1 root root 10737 May 18 13:46 waterfall.js
 </code></pre></div></div>
 
-<h2 id="安装ruby">安装ruby</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install ruby
-## 因为从国外的网站的下载，可能会很慢
-## 你可以通过 export ALL_PROXY 来使用代理
-## 漫长的等待过后提示安装成功的话
-rvm list
-## 显示已经安装的ruby版本
-rvm use 2.7.0 --default
-## 这里我使用最新的2.7.0 并设置为默认
-</code></pre></div></div>
-<h2 id="变更-gem镜像源">变更 <code class="highlighter-rouge">gem</code>镜像源</h2>
-<p>因为 <code class="highlighter-rouge">gem</code> 原有的很慢（你懂的），所以这里改成国内的源</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org
-gem sources --add https://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org
-gem sources -l //查看在用的 gem 源
-</code></pre></div></div>
-
-<h2 id="安装-jekyll">安装 <code class="highlighter-rouge">jekyll</code></h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
-## 会自动安装依赖包
-</code></pre></div></div>
-
-<h2 id="安装-jekyll-paginate">安装 <code class="highlighter-rouge">jekyll-paginate</code></h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-paginate
-</code></pre></div></div>
-
-<h2 id="修改_configxml-添加以下内容">修改<code class="highlighter-rouge">_config.xml</code> 添加以下内容</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># paginate
-gems: [jekyll-paginate]
-paginate: 6
-
-plugins: [jekyll-paginate]
-
+<h2 id="在网站根目录下添加searchjson内容如下">在网站根目录下添加<code class="highlighter-rouge">search.json</code>，内容如下</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+[
+  
+    {
+      "title" : "使用 Simple-Jekyll-Search 创建全文搜索",
+      "category" : "",
+      "tags" : "jekyll, Simple-Jekyll-Search",
+      "url" : "/2020/05/19/use-jekyll-search/",
+      "date" : "2020-05-19 00:30:54 +0800"
+    } ,
+  
+    {
+      "title" : "使用 jekyll + Github 创建自己的博客站点",
+      "category" : "",
+      "tags" : "jekyll, github, pages",
+      "url" : "/2020/05/19/create-site/",
+      "date" : "2020-05-19 00:30:54 +0800"
+    } ,
+  
+    {
+      "title" : "hello jekyll!",
+      "category" : "",
+      "tags" : "jekyll",
+      "url" : "/2015/02/10/welcome-to-jekyll/",
+      "date" : "2015-02-10 23:14:54 +0800"
+    } 
+  
+]
 </code></pre></div></div>
 
-<h2 id="执行jekyll-server来查看效果">执行<code class="highlighter-rouge">jekyll server</code>来查看效果</h2>
-<p>进入 git clone 下来的目录 ，执行<code class="highlighter-rouge">jekyll server -w -H 0.0.0.0</code> 启动服务，然后就可以通过<code class="highlighter-rouge">http://ip:4000</code>（ip换成自己的）端口来访问了。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@aeas gaohaoyang.github.io]# jekyll server -w -H 0.0.0.0
-Configuration file: none
-            Source: /root/gaohaoyang.github.io
-       Destination: /root/gaohaoyang.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-                    done in 0.01 seconds.
- Auto-regeneration: enabled for '/root/gaohaoyang.github.io'
-    Server address: http://0.0.0.0:4000
-  Server running... press ctrl-c to stop.
+<h2 id="在_sass目录下修改_indexcss文件在文件末尾添加以下内容">在<code class="highlighter-rouge">_sass</code>目录下修改<code class="highlighter-rouge">_index.css</code>文件，在文件末尾添加以下内容</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#search-input {
+    width: 90%;
+    height: 35px;
+    color: #333;
+    background-color: rgba(227,231,236,.2);
+    line-height: 35px;
+    padding:0px 16px;
+    border: 1px solid #c0c0c0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+#search-input:focus {
+    outline: none;
+    border-color: rgb(102, 175, 233);
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
+}
 </code></pre></div></div>
 
+<h2 id="修改_layoutdefaulthtml文件添加一下内容">修改<code class="highlighter-rouge">_layout/default.html</code>文件，添加一下内容：</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src=" /js/simple-jekyll-search.js " charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '&lt;li&gt;&lt;a href="{url}" title="{desc}"&gt;{title}&lt;/a&gt;&lt;/li&gt;',
+    noResultsText: '没有搜索到文章',
+    limit: 20,
+    fuzzy: false
+  })
+&lt;/script&gt;
+</code></pre></div></div>
+
+<h2 id="修改indexhtml-文件">修改<code class="highlighter-rouge">index.html</code> 文件</h2>
+<p>修改根目录下的<code class="highlighter-rouge">index.html</code>文件，在<code class="highlighter-rouge">Recent Posts</code>上面添加一下段</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;div class="side"&gt;
+                &lt;div id="search-container"&gt;
+                    &lt;input type="text" id="search-input" placeholder="search..."&gt;
+                    &lt;ul id="results-container"&gt;&lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+</code></pre></div></div>
 
         </article>
         <hr>
@@ -264,7 +287,7 @@ Configuration file: none
                         <ul>
                         
                         <li class="relatedPost">
-                            <a href="/2020/05/19/use-jekyll-search/">使用 Simple-Jekyll-Search 创建全文搜索
+                            <a href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点
                             
                             </a>
                         </li>
@@ -274,11 +297,13 @@ Configuration file: none
                 
                     
                 
-                    
-                
             
                 
                     
+                
+                    
+                
+            
                 
                     
                 
@@ -302,8 +327,6 @@ Configuration file: none
                 
                     
                 
-                    
-                
             
         
         
@@ -313,13 +336,11 @@ Configuration file: none
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2015/02/10/welcome-to-jekyll/">hello jekyll!</a></p>
+        <p><strong>上一篇</strong> <a href="/2020/05/19/create-site/">使用 jekyll + Github 创建自己的博客站点</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2020/05/19/use-jekyll-search/">使用 Simple-Jekyll-Search 创建全文搜索</a></p>
         
     </div>
 </div>
