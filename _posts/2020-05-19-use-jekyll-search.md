@@ -8,6 +8,9 @@ author: 雨田
 mathjax: true
 ---
 
+* content
+{:toc}
+
 ## 下载 `Simple-Jekyll-Search` 文件
 百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。
 ```
