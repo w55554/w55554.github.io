@@ -3,7 +3,7 @@
     {
       "title"    : "使用 Simple-Jekyll-Search 创建全文搜索",
       "category" : "",
-      "tags"     : "jekyll",
+      "tags"     : "jekyll, Simple-Jekyll-Search",
       "url"      : "/2020/05/19/use-jekyll-search/",
       "date"     : "2020-05-19 00:30:54 +0800"
     } ,
@@ -11,7 +11,7 @@
     {
       "title"    : "使用 jekyll + Github 创建自己的博客站点",
       "category" : "",
-      "tags"     : "jekyll",
+      "tags"     : "jekyll, github, pages",
       "url"      : "/2020/05/19/create-site/",
       "date"     : "2020-05-19 00:30:54 +0800"
     } ,

@@ -5,13 +5,17 @@
     <description></description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 May 2020 15:57:22 +0800</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 15:57:22 +0800</lastBuildDate>
+    <pubDate>Tue, 19 May 2020 17:40:52 +0800</pubDate>
+    <lastBuildDate>Tue, 19 May 2020 17:40:52 +0800</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
         <title>使用 Simple-Jekyll-Search 创建全文搜索</title>
-        <description>&lt;h2 id=&quot;下载-simple-jekyll-search-文件&quot;&gt;下载 &lt;code class=&quot;highlighter-rouge&quot;&gt;Simple-Jekyll-Search&lt;/code&gt; 文件&lt;/h2&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#下载-simple-jekyll-search-文件&quot; id=&quot;markdown-toc-下载-simple-jekyll-search-文件&quot;&gt;下载 &lt;code class=&quot;highlighter-rouge&quot;&gt;Simple-Jekyll-Search&lt;/code&gt; 文件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;下载-simple-jekyll-search-文件&quot;&gt;下载 &lt;code class=&quot;highlighter-rouge&quot;&gt;Simple-Jekyll-Search&lt;/code&gt; 文件&lt;/h2&gt;
 百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/christian-fei/Simple-Jekyll-Search.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -25,94 +29,14 @@ total 76
 -rw-r--r-- 1 root root 5014 May 18 13:46 smooth-scroll.min.js
 -rw-r--r-- 1 root root 10737 May 18 13:46 waterfall.js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;在网站根目录下添加searchjson内容如下&quot;&gt;在网站根目录下添加&lt;code class=&quot;highlighter-rouge&quot;&gt;search.json&lt;/code&gt;，内容如下&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: null
----
-[
-  
-    {
-      &quot;title&quot; : &quot;使用 Simple-Jekyll-Search 创建全文搜索&quot;,
-      &quot;category&quot; : &quot;&quot;,
-      &quot;tags&quot; : &quot;jekyll&quot;,
-      &quot;url&quot; : &quot;/2020/05/19/use-jekyll-search/&quot;,
-      &quot;date&quot; : &quot;2020-05-19 00:30:54 +0800&quot;
-    } ,
-  
-    {
-      &quot;title&quot; : &quot;使用 jekyll + Github 创建自己的博客站点&quot;,
-      &quot;category&quot; : &quot;&quot;,
-      &quot;tags&quot; : &quot;jekyll&quot;,
-      &quot;url&quot; : &quot;/2020/05/19/create-site/&quot;,
-      &quot;date&quot; : &quot;2020-05-19 00:30:54 +0800&quot;
-    } ,
-  
-    {
-      &quot;title&quot; : &quot;hello jekyll!&quot;,
-      &quot;category&quot; : &quot;&quot;,
-      &quot;tags&quot; : &quot;jekyll&quot;,
-      &quot;url&quot; : &quot;/2015/02/10/welcome-to-jekyll/&quot;,
-      &quot;date&quot; : &quot;2015-02-10 23:14:54 +0800&quot;
-    } 
-  
-]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;在_sass目录下修改_indexcss文件在文件末尾添加以下内容&quot;&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;_sass&lt;/code&gt;目录下修改&lt;code class=&quot;highlighter-rouge&quot;&gt;_index.css&lt;/code&gt;文件，在文件末尾添加以下内容&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#search-input {
-    width: 90%;
-    height: 35px;
-    color: #333;
-    background-color: rgba(227,231,236,.2);
-    line-height: 35px;
-    padding:0px 16px;
-    border: 1px solid #c0c0c0;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 17px;
-    outline: none;
-    box-sizing: border-box;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-}
-#search-input:focus {
-    outline: none;
-    border-color: rgb(102, 175, 233);
-    background-color: #fff;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;修改_layoutdefaulthtml文件添加一下内容&quot;&gt;修改&lt;code class=&quot;highlighter-rouge&quot;&gt;_layout/default.html&lt;/code&gt;文件，添加一下内容：&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script src=&quot; /js/simple-jekyll-search.js &quot; charset=&quot;utf-8&quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '&amp;lt;li&amp;gt;&amp;lt;a href=&quot;{url}&quot; title=&quot;{desc}&quot;&amp;gt;{title}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;',
-    noResultsText: '没有搜索到文章',
-    limit: 20,
-    fuzzy: false
-  })
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;修改indexhtml-文件&quot;&gt;修改&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; 文件&lt;/h2&gt;
-修改根目录下的&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;文件，在&lt;code class=&quot;highlighter-rouge&quot;&gt;Recent Posts&lt;/code&gt;上面添加一下段
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;lt;div class=&quot;side&quot;&amp;gt;
-                &amp;lt;div id=&quot;search-container&quot;&amp;gt;
-                    &amp;lt;input type=&quot;text&quot; id=&quot;search-input&quot; placeholder=&quot;search...&quot;&amp;gt;
-                    &amp;lt;ul id=&quot;results-container&quot;&amp;gt;&amp;lt;/ul&amp;gt;
-                &amp;lt;/div&amp;gt;
-            &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 19 May 2020 00:30:54 +0800</pubDate>
         <link>http://0.0.0.0:4000/2020/05/19/use-jekyll-search/</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2020/05/19/use-jekyll-search/</guid>
         
         <category>jekyll</category>
+        
+        <category>Simple-Jekyll-Search</category>
         
         
         <category>jekyll</category>
@@ -121,12 +45,34 @@ SimpleJekyllSearch({
     
       <item>
         <title>使用 jekyll + Github 创建自己的博客站点</title>
-        <description>使用Github pages + jekyll 创建自己的小站，文章中是详细的教程。</description>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#使用-jekyll--github-pages-创建自己的博客站点&quot; id=&quot;markdown-toc-使用-jekyll--github-pages-创建自己的博客站点&quot;&gt;使用 jekyll + Github Pages 创建自己的博客站点&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#安装-rvm&quot; id=&quot;markdown-toc-安装-rvm&quot;&gt;安装 rvm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;使用-jekyll--github-pages-创建自己的博客站点&quot;&gt;使用 jekyll + Github Pages 创建自己的博客站点&lt;/h2&gt;
+原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了），所以我这里使用了Github Pages + Jekyll 来搞，主题大家可以官网&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;http://jekyllthemes.org/&lt;/a&gt;去选择，不要挑花眼了。我这里选用了的是&lt;a href=&quot;https://github.com/Gaohaoyang/gaohaoyang.github.io&quot;&gt;HYG&lt;/a&gt;大神的，Fork（不知道什么意思的，自行搜索吧。）一份到自己的仓库中，自行修改吧。
+
+&lt;h2 id=&quot;安装-rvm&quot;&gt;安装 rvm&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+//如果上面的连接失败，可以尝试:
+curl -L https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm -v 
+## 出现了RVM的版本号，代表安装成功了
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
         <pubDate>Tue, 19 May 2020 00:30:54 +0800</pubDate>
         <link>http://0.0.0.0:4000/2020/05/19/create-site/</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2020/05/19/create-site/</guid>
         
         <category>jekyll</category>
+        
+        <category>github</category>
+        
+        <category>pages</category>
         
         
         <category>jekyll</category>

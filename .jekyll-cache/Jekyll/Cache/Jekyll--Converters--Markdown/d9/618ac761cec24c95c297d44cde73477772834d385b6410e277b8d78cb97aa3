@@ -1,4 +1,12 @@
-I"V<h2 id="下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</h2>
+I" <ul id="markdown-toc">
+  <li><a href="#下载-simple-jekyll-search-文件" id="markdown-toc-下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</a></li>
+  <li><a href="#在网站根目录下添加searchjson内容如下" id="markdown-toc-在网站根目录下添加searchjson内容如下">在网站根目录下添加<code class="highlighter-rouge">search.json</code>，内容如下</a></li>
+  <li><a href="#在_sass目录下修改_indexcss文件在文件末尾添加以下内容" id="markdown-toc-在_sass目录下修改_indexcss文件在文件末尾添加以下内容">在<code class="highlighter-rouge">_sass</code>目录下修改<code class="highlighter-rouge">_index.css</code>文件，在文件末尾添加以下内容</a></li>
+  <li><a href="#修改_layoutdefaulthtml文件添加一下内容" id="markdown-toc-修改_layoutdefaulthtml文件添加一下内容">修改<code class="highlighter-rouge">_layout/default.html</code>文件，添加一下内容：</a></li>
+  <li><a href="#修改indexhtml-文件" id="markdown-toc-修改indexhtml-文件">修改<code class="highlighter-rouge">index.html</code> 文件</a></li>
+</ul>
+
+<h2 id="下载-simple-jekyll-search-文件">下载 <code class="highlighter-rouge">Simple-Jekyll-Search</code> 文件</h2>
 <p>百度搜索出来的一个有用的都没有，看来还是得找谷哥啊（在这里BS一下百度）。</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/christian-fei/Simple-Jekyll-Search.git
 </code></pre></div></div>
@@ -12,6 +20,7 @@ total 76
 -rw-r--r-- 1 root root 5014 May 18 13:46 smooth-scroll.min.js
 -rw-r--r-- 1 root root 10737 May 18 13:46 waterfall.js
 </code></pre></div></div>
+
 <h2 id="在网站根目录下添加searchjson内容如下">在网站根目录下添加<code class="highlighter-rouge">search.json</code>，内容如下</h2>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: null
@@ -21,7 +30,7 @@ layout: null
     {
       "title" : "使用 Simple-Jekyll-Search 创建全文搜索",
       "category" : "",
-      "tags" : "jekyll",
+      "tags" : "jekyll, Simple-Jekyll-Search",
       "url" : "/2020/05/19/use-jekyll-search/",
       "date" : "2020-05-19 00:30:54 +0800"
     } ,
@@ -29,7 +38,7 @@ layout: null
     {
       "title" : "使用 jekyll + Github 创建自己的博客站点",
       "category" : "",
-      "tags" : "jekyll",
+      "tags" : "jekyll, github, pages",
       "url" : "/2020/05/19/create-site/",
       "date" : "2020-05-19 00:30:54 +0800"
     } ,

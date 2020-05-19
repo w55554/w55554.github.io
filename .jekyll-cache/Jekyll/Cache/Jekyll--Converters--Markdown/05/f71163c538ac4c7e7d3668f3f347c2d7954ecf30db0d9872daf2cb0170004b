@@ -1,0 +1,19 @@
+I"<ul id="markdown-toc">
+  <li><a href="#使用-jekyll--github-pages-创建自己的博客站点" id="markdown-toc-使用-jekyll--github-pages-创建自己的博客站点">使用 jekyll + Github Pages 创建自己的博客站点</a></li>
+  <li><a href="#安装-rvm" id="markdown-toc-安装-rvm">安装 rvm</a></li>
+</ul>
+
+<h2 id="使用-jekyll--github-pages-创建自己的博客站点">使用 jekyll + Github Pages 创建自己的博客站点</h2>
+<p>原来一直用的WP，后来没有精力去管理了，干脆就转到github上吧，只需要commit提交就行了，省事简单，主要是我懒（看我的网站图标就知道了），所以我这里使用了Github Pages + Jekyll 来搞，主题大家可以官网<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a>去选择，不要挑花眼了。我这里选用了的是<a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">HYG</a>大神的，Fork（不知道什么意思的，自行搜索吧。）一份到自己的仓库中，自行修改吧。</p>
+
+<h2 id="安装-rvm">安装 rvm</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+//如果上面的连接失败，可以尝试:
+curl -L https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm -v 
+## 出现了RVM的版本号，代表安装成功了
+</code></pre></div></div>
+:ET
