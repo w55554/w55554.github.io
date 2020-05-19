@@ -23,6 +23,12 @@ total 76
 -rw-r--r-- 1 root root 5014 May 18 13:46 smooth-scroll.min.js
 -rw-r--r-- 1 root root 10737 May 18 13:46 waterfall.js
 ```
+
+
+
+
+
+
 ## 在网站根目录下添加`search.json`，内容如下
 ```
 ---
