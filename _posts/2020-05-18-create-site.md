@@ -16,6 +16,7 @@ mathjax: true
 
 
 ## 安装 rvm
+
 ```
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
@@ -26,7 +27,16 @@ rvm -v
 ## 出现了RVM的版本号，代表安装成功了
 ```
 
+
+
+
+
+
+
+
+
 ## 安装ruby
+
 ```
 rvm install ruby
 ## 因为从国外的网站的下载，可能会很慢
