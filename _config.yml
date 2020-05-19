@@ -24,20 +24,23 @@ zhihu_username: wanglei7031251
 linkedIn_username: wanglei7031251
 dribbble_username:
 
+Livere:
+  livere_uid: MTAyMC81MDE2Ny8yNjY1Nw==
+
 description_footer: 记录沿途风景，回忆美好时光。
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: wanglei7031251
+# duoshuo_shortname: #hygblog
+# disqus_shortname: wanglei7031251
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
 baidu_tongji_id: 
-google_analytics_id: 
+# google_analytics_id: 
 
 # Build settings
 markdown: kramdown
