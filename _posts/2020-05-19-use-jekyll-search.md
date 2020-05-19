@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用 Simple-Jekyll-Search 创建全文搜索"
-date:   2020-05-18 16:30:54
+date:   2020-05-19 16:30:54
 categories: jekyll
 tags: jekyll Simple-Jekyll-Search
 author: 雨田
