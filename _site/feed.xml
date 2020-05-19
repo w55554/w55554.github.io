@@ -3,18 +3,18 @@
   <channel>
     <title>Len's site</title>
     <description></description>
-    <link>http://0.0.0.0:4000/</link>
-    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 May 2020 14:04:02 +0800</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 14:04:02 +0800</lastBuildDate>
+    <link>https://www.it1zu.cn/</link>
+    <atom:link href="https://www.it1zu.cn/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 19 May 2020 14:18:42 +0800</pubDate>
+    <lastBuildDate>Tue, 19 May 2020 14:18:42 +0800</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
         <title>使用 jekyll + Github 创建自己的博客站点</title>
         <description>使用Github pages + jekyll 创建自己的小站，文章中是详细的教程。</description>
         <pubDate>Tue, 19 May 2020 00:30:54 +0800</pubDate>
-        <link>http://0.0.0.0:4000/2020/05/19/create-site/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2020/05/19/create-site/</guid>
+        <link>https://www.it1zu.cn/2020/05/19/create-site/</link>
+        <guid isPermaLink="true">https://www.it1zu.cn/2020/05/19/create-site/</guid>
         
         <category>jekyll</category>
         
@@ -27,8 +27,8 @@
         <title>hello jekyll!</title>
         <description>当年创建 jekyll 时默认的一篇文章，没什么意义，我也一直没删除，留个纪念吧。</description>
         <pubDate>Tue, 10 Feb 2015 23:14:54 +0800</pubDate>
-        <link>http://0.0.0.0:4000/2015/02/10/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2015/02/10/welcome-to-jekyll/</guid>
+        <link>https://www.it1zu.cn/2015/02/10/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">https://www.it1zu.cn/2015/02/10/welcome-to-jekyll/</guid>
         
         <category>jekyll</category>
         
