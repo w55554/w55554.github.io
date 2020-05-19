@@ -21,15 +21,17 @@
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
    
+    </script>
+    <script type="text/javascript">
       SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: '没有搜索到文章',
-    limit: 20,
-    fuzzy: false
-  })
+           searchInput: document.getElementById('search-input'),
+           resultsContainer: document.getElementById('results-container'),
+           json: '/search.json',
+           searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+           noResultsText: '没有搜索到文章',
+           limit: 20,
+           fuzzy: false
+      })
     </script>
     <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
   </body>
