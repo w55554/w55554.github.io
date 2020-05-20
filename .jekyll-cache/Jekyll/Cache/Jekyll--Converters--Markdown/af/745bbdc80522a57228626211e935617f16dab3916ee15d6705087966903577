@@ -1,5 +1,36 @@
+I"|	<ul id="markdown-toc">
+  <li><a href="#关于我" id="markdown-toc-关于我">关于我</a></li>
+  <li><a href="#联系我" id="markdown-toc-联系我">联系我</a></li>
+  <li><a href="#友情链接" id="markdown-toc-友情链接">友情链接</a></li>
+  <li><a href="#评论" id="markdown-toc-评论">评论</a></li>
+</ul>
+
+<h2 id="关于我">关于我</h2>
+
+<ul>
+  <li>爆照</li>
+</ul>
+
+<p>对自己的相貌没有信心(瞅自己不顺眼)，这里就不放照片。</p>
+
+<h2 id="联系我">联系我</h2>
+
+<ul>
+  <li>GitHub：</li>
+  <li>email：</li>
+  <li>Weibo</li>
+  <li>知乎</li>
+  <li>Facebook</li>
+  <li>豆瓣</li>
+</ul>
+
+<h2 id="友情链接">友情链接</h2>
+<p>link</p>
+
+<h2 id="评论">评论</h2>
+
 <!--
-{% if site.disqus_shortname %}
+
 <div id="lv-container" data-id="city" data-uid="MTAyMC81MDE2Ny8yNjY1Nw==">
 <script type="text/javascript">
    (function(d, s) {
@@ -16,15 +47,14 @@
 </script>
 <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
-{% endif %}
+
 -->
 
-{% if site.disqus_shortname %}
-<div id="SOHUCS"></div> 
+<div id="SOHUCS"></div>
 <script type="text/javascript"> 
 (function(){ 
-var appid = {{ site.kuaizhan_appid }}; 
-var conf = {{ site.disqus_shortname }};
+var appid = cyuQpFRkM; 
+var conf = ;
 var width = window.innerWidth || document.documentElement.clientWidth; 
 if (width < 960) {
 var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
@@ -35,4 +65,5 @@ script.id = 'changyan_mobile_js';
 script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
 head.appendChild(script);
 } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-{% endif %}
+
+:ET
